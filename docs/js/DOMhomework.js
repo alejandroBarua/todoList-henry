@@ -1,14 +1,23 @@
 // Crear un array vacío llamado 'toDoItems'
 // Tu codigo acá:
 
-const toDoItems = [
-  {description: 'Stand Up', complete: false},
-  {description: 'Pair Programming', complete: false},
-  {description: 'Individual', complete: false},
-  {description: 'Almuerzo', complete: false},
-  {description: 'Lecture', complete: false},
-  {description: 'Code Review', complete: false},
-];
+let toDoItems;
+
+if(!window.localStorage.tasks){
+  toDoItems = [
+    {description: 'Stand Up', complete: false},
+    {description: 'Pair Programming', complete: false},
+    {description: 'Individual', complete: false},
+    {description: 'Almuerzo', complete: false},
+    {description: 'Lecture', complete: false},
+    {description: 'Code Review', complete: false},
+  ];
+  localStorage.setItem("tasks", JSON.stringify(toDoItems));
+}
+else{
+
+  toDoItems = JSON.parse(localStorage.getItem("tasks"));
+}
 
 // En la página 'index.html' hay un elemento span cuyo texto es 'Aplicación creada por:'.
 // Usando querySelector seleccionar dicho span por su id ('createdBy') y luego usando innerHTML
@@ -128,6 +137,7 @@ function displayToDos() {
   const tasks = buildToDos(toDoItems);
   tasks.forEach(el => toDoContainer.prepend(el));
 
+  localStorage.setItem("tasks", JSON.stringify(toDoItems));
   toDoInput.focus();
 }
 

@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Todo List</title>
+    <link rel="shortcut icon" href="./assets/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/init.css">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+</head>
+
+<body class="gradient">
+
+    <div class="container wrapper d-flex flex-column">
+
+        <h1 id="title">TODO LIST</h1>
+        <div class="date d-flex">
+            <h2><span class="number-day"></span> <span class="month">Octuber</span></h2>
+            <h3 class="day">Monday</h3>
+        </div>
+        <div class="input-container d-flex">
+            <span class="icon-clipboard">
+                <i class="bi bi-clipboard"></i>
+            </span>
+            <input type="text" id="toDoInput" placeholder="Enter your next task" />
+            <span id="addButton"><i class="bi bi-plus-circle"></i></span>
+        </div>
+        <br>
+        <div id="toDoContainer">
+        </div>
+    </div>
+    </div>
+    <footer>
+        <img src="./assets/henry.png" alt="soy henry">
+        <div>
+            <span class="creator">© 2021 by Alejandro Barua <a href="https://www.linkedin.com/in/alejandrobarua/"
+                    target="_blank">my
+                    Linkedin</a></span>
+        </div>
+    </footer>
+    <script type="text/javascript" src="./DOMhomework.js" async></script>
+    <script src="./date.js"></script>
+</body>
+
+</html>

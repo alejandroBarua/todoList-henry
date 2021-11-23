@@ -21,3 +21,15 @@
     font-size: 26px;
   }
 }
+
+@media screen and (max-width: 450px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  html {
+    font-size: 16px;
+  }
+}

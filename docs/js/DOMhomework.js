@@ -130,15 +130,12 @@ function buildToDos(toDos) {
 function displayToDos() {
   // Tu código acá:
   const toDoContainer = document.querySelector('#toDoContainer');
-  const toDoInput = document.querySelector('#toDoInput');
-  
   toDoContainer.innerHTML = '';
   
   const tasks = buildToDos(toDoItems);
   tasks.forEach(el => toDoContainer.prepend(el));
 
   localStorage.setItem("tasks", JSON.stringify(toDoItems));
-  toDoInput.focus();
 }
 
 
@@ -159,7 +156,6 @@ function addToDo() {
   const newTodo = new ToDo(description)
   toDoItems.push(newTodo);
   toDoInput.value = '';
-  toDoInput.focus();
   displayToDos();
 }
 
